@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "bee-or-three"
+version = "0.1.0"
+description = "A computer vision model determining if it is a bee, a three, a tree or a humvee, with Fast.ai library"
+authors = ["Nguyen Tran <nguyen.tran1072e@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = {version = "^2.2.1+cpu", source = "pytorch_cpu"}
+torchvision = {version = "^0.17.1+cpu", source = "pytorch_cpu"}
+fastai = "^2.7.14"
+duckduckgo-search = "^5.1.0"
+
+[[tool.poetry.source]]
+name = "pytorch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.3"
+notebook = "^7.1.2"
+ipywidgets = "^8.1.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
